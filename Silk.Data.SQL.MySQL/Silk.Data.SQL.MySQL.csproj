@@ -1,7 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.0.5</Version>
+    <Authors>John Carruthers</Authors>
+    <Company />
+    <Product>SilkStack</Product>
+    <Description>Silk.Data.SQL.MySQL is the MySQL provider for Silk.Data.SQL.Base.
+
+Part of the SilkStack project.</Description>
   </PropertyGroup>
 
   <ItemGroup>
