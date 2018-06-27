@@ -1,4 +1,5 @@
 ﻿using Silk.Data.SQL.Expressions;
+using Silk.Data.SQL.MySQL.Expressions;
 using Silk.Data.SQL.Queries;
 using System;
 using System.Collections.Generic;
@@ -78,6 +79,9 @@ AND table_name = '{tableExistsExpression.Table.TableName}'");
 			{
 				switch (queryExpression)
 				{
+					case MySQLRawQueryExpression rawExpression:
+						Sql.Append(rawExpression.SqlText);
+						break;
 					case TransactionExpression transaction:
 						Sql.AppendLine("START TRANSACTION;");
 						foreach (var query in transaction.Queries)
